@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { getQuote } from './api/QuoteGenerator'
+
 
 function App() {
 
@@ -10,7 +9,7 @@ function App() {
   
 
 
-  useEffect((e) => {
+  useEffect(() => {
    const getQuoteData = async () => {
     const q = await getQuote()
     setQuote(q)
@@ -24,23 +23,23 @@ function App() {
   }
 
   return (
-    <>
-      
-      {quote && 
-      (
-        quote.map((i) => (
-          <div key={i._id}>
-            <p>{i.content}</p>
-            <p>{i.author}</p>
-          </div>
-        ))
-      )
-      
-      }
-    
-
-      <button onClick={getNewQuote}>Get New Quote</button>
-    </>
+    <div className="app-container">
+      <h1>Quote Generator</h1>
+      <div className="quote-card">
+        {quote && 
+        (
+          quote.map((i) => (
+            <div key={i._id} className="quote-content">
+              <h2>"{i.content}"</h2>
+              <p>- {i.author}</p>
+            </div>
+          ))
+        )
+        
+        }
+        <button onClick={getNewQuote} className="new-quote-btn">Generate New Quote</button>
+      </div>
+    </div>
   )
 }
 

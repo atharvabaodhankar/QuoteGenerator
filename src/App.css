@@ -1,42 +1,69 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
+  max-width: 600px;
+  width: 90%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  color: #333333;
+  margin-bottom: 25px;
+  font-size: 2.5em;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quote-card {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.quote-content h2 {
+  color: #555555;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  line-height: 1.4;
 }
 
-.card {
-  padding: 2em;
+.quote-content p {
+  color: #777777;
+  font-size: 1.2em;
+  font-style: italic;
 }
 
-.read-the-docs {
-  color: #888;
+.new-quote-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  outline: none;
+}
+
+.new-quote-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.new-quote-btn:active {
+  background-color: #004085;
+  transform: translateY(0);
 }
