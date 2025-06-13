@@ -12,25 +12,32 @@ function App() {
 
   useEffect((e) => {
    const getQuoteData = async () => {
-    const quote = await getQuote()
-    setQuote(quote)
-   }
-   getQuoteData()
+    const q = await getQuote()
+    setQuote(q)
+    }
+    getQuoteData()
   }, [])
   
   const getNewQuote = async () => {
-    const quote = await getQuote()
-    setQuote(quote)
+    const q = await getQuote()
+    setQuote(q)
   }
 
   return (
     <>
-      {quote && (
-        <div>
-          <h1>{quote.content}</h1>
-          <p>{quote.author}</p>
-        </div>
-      )}
+      
+      {quote && 
+      (
+        quote.map((i) => (
+          <div key={i._id}>
+            <p>{i.content}</p>
+            <p>{i.author}</p>
+          </div>
+        ))
+      )
+      
+      }
+    
 
       <button onClick={getNewQuote}>Get New Quote</button>
     </>
