@@ -1,4 +1,8 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #e0e5ec;
@@ -6,7 +10,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0;
   overflow: hidden;
 }
 
@@ -105,6 +108,75 @@ h1 {
   transition: all 0.3s ease;
   outline: none;
   font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 30px;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+  }
+
+  .quote-card {
+    padding: 25px;
+  }
+
+  .quote-content h2 {
+    font-size: 1.6em;
+  }
+
+  .quote-content p {
+    font-size: 1.1em;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-group input[type="number"],
+  .input-group input[type="text"] {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .new-quote-btn {
+    padding: 15px 25px;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 20px;
+    margin: 0 1rem;
+}
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .quote-card {
+    padding: 20px;
+  }
+
+  .quote-content h2 {
+    font-size: 1.4em;
+  }
+
+  .quote-content p {
+    font-size: 1em;
+  }
+
+  .new-quote-btn {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
 }
 
 .new-quote-btn:hover {
