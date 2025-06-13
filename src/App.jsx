@@ -7,19 +7,20 @@ function App() {
 
   const [quote, setQuote] = useState(null)
   const [numQuotes, setNumQuotes] = useState(1)
+  const [tags, setTags] = useState('')
   
 
 
   useEffect(() => {
    const getQuoteData = async () => {
-    const q = await getQuote(numQuotes)
+    const q = await getQuote(numQuotes, tags)
     setQuote(q)
     }
     getQuoteData()
-  }, [numQuotes])
+  }, [numQuotes, tags])
   
   const getNewQuote = async () => {
-    const q = await getQuote(numQuotes)
+    const q = await getQuote(numQuotes, tags)
     setQuote(q)
   }
 
@@ -46,6 +47,16 @@ function App() {
             min="1"
             value={numQuotes}
             onChange={(e) => setNumQuotes(e.target.value)}
+          />
+        </div>
+        <div className="input-group">
+          <label htmlFor="tags">Tags (comma or | separated):</label>
+          <input
+            type="text"
+            id="tags"
+            value={tags}
+            onChange={(e) => setTags(e.target.value)}
+            placeholder="e.g., technology,famous-quotes or history|civil-rights"
           />
         </div>
         <button onClick={getNewQuote} className="new-quote-btn">Generate New Quote</button>
