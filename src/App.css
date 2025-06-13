@@ -67,3 +67,32 @@ h1 {
   background-color: #004085;
   transform: translateY(0);
 }
+
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group label {
+  margin-right: 10px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.input-group input[type="number"] {
+  width: 70px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  text-align: center;
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.input-group input[type="number"]::-webkit-outer-spin-button,
+.input-group input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
