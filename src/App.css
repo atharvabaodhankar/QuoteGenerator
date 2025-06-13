@@ -1,106 +1,118 @@
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f7f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e0e5ec;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  overflow: hidden;
 }
 
 .app-container {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-color: #e0e5ec;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
   text-align: center;
-  max-width: 600px;
+  max-width: 650px;
   width: 90%;
+  transition: all 0.3s ease;
 }
 
 h1 {
-  color: #333333;
-  margin-bottom: 25px;
-  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.8em;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .quote-card {
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #e0e5ec;
+  padding: 35px;
+  border-radius: 25px;
+  margin-bottom: 35px;
+  box-shadow: inset 5px 5px 10px rgba(163, 177, 198, 0.6), inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
 }
 
 .quote-content h2 {
-  color: #555555;
-  font-size: 1.8em;
-  margin-bottom: 15px;
-  line-height: 1.4;
+  color: #555;
+  font-size: 1.9em;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 .quote-content p {
-  color: #777777;
-  font-size: 1.2em;
+  color: #777;
+  font-size: 1.3em;
   font-style: italic;
+  font-weight: 400;
+}
+
+.input-group {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.input-group label {
+  margin-right: 5px;
+  font-size: 1.15em;
+  color: #555;
+  font-weight: 500;
+}
+
+.input-group input[type="number"],
+.input-group input[type="text"] {
+  background-color: #e0e5ec;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.6), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
+  font-size: 1em;
+  color: #333;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.input-group input[type="number"] {
+  width: 80px;
+}
+
+.input-group input[type="text"] {
+  width: 300px;
+}
+
+.input-group input:focus {
+  outline: none;
+  box-shadow: inset 1px 1px 2px rgba(163, 177, 198, 0.7), inset -1px -1px 2px rgba(255, 255, 255, 0.6);
 }
 
 .new-quote-btn {
-  background-color: #007bff;
-  color: white;
+  background-color: #e0e5ec;
+  color: #555;
   border: none;
-  padding: 15px 25px;
-  border-radius: 8px;
-  font-size: 1.1em;
+  padding: 18px 30px;
+  border-radius: 25px;
+  font-size: 1.2em;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 6px 6px 12px rgba(163, 177, 198, 0.6), -6px -6px 12px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
   outline: none;
+  font-weight: 600;
 }
 
 .new-quote-btn:hover {
-  background-color: #0056b3;
+  box-shadow: 3px 3px 6px rgba(163, 177, 198, 0.6), -3px -3px 6px rgba(255, 255, 255, 0.5);
   transform: translateY(-2px);
 }
 
 .new-quote-btn:active {
-  background-color: #004085;
+  box-shadow: inset 2px 2px 5px rgba(163, 177, 198, 0.6), inset -2px -2px 5px rgba(255, 255, 255, 0.5);
   transform: translateY(0);
-}
-
-.input-group {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.input-group label {
-  margin-right: 10px;
-  font-size: 1.1em;
-  color: #555;
-}
-
-.input-group input[type="number"] {
-  width: 70px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
-  text-align: center;
-  -moz-appearance: textfield; /* Firefox */
-}
-
-.input-group input[type="number"]::-webkit-outer-spin-button,
-.input-group input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.input-group input[type="text"] {
-  width: 250px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
 }
